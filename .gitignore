@@ -5,6 +5,7 @@ node_modules
 (Node.js) adobe PDF services SDK/resources/*
 (Node.js) adobe PDF services SDK/output/*
 output/*
-resources/*
+resources/*.pdf
+resources/*.json
 CODE_OF_CONDUCT.md
 LICENSE.md
