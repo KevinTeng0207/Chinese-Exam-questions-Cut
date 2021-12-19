@@ -2,7 +2,6 @@
 (Node.js) adobe PDF services SDK/pdfservices-api-credentials.json
 node_modules/*
 node_modules
-(Node.js) adobe PDF services SDK/resources/*
 (Node.js) adobe PDF services SDK/output/*
 output/*
 resources/*.pdf
