@@ -1,9 +1,9 @@
-(Node.js) adobe PDF services SDK/private.key
-(Node.js) adobe PDF services SDK/pdfservices-api-credentials.json
+Adobe PDF services SDK/private.key
+Adobe PDF services SDK/pdfservices-api-credentials.json
 node_modules/*
 node_modules
-(Node.js) adobe PDF services SDK/output/*
-output/*
+Adobe PDF services SDK/output/*
+output/*/
 resources/*.pdf
 resources/*.json
 CODE_OF_CONDUCT.md
