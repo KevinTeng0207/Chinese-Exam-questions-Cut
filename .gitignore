@@ -9,3 +9,4 @@ resources/*.pdf
 resources/*.json
 CODE_OF_CONDUCT.md
 LICENSE.md
+__pycache__/*
