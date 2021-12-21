@@ -2,28 +2,25 @@
 ## Prerequisites
 * Node.js : Version 10.13
 * Python : > 3.0 
-
-## Installation
-
-Use the npm(Node.js) to install modules
-
-### node_modules Installation
+* put PDf to resources/
+# Installation
+## Node.js Installation
 
 ```bash
 cd AdobePDFservicesSDK/
 npm install
 ```
 
-### python Installation
+## Python Installation
 ```bash
 cd ..
 cd src/
 pip install -r requirements.txt
 ```
-## Config
 
-pdfdir 跟 pdfname 自行設定
-pdfname 跟 pdf 檔名一樣
+# Config
+pdfdir 跟 pdfname 自行設定\
+pdfname 跟 pdf 檔名一樣\
 problemMAX 為 需要抓取的考題數量
 ```json
 {
@@ -33,7 +30,7 @@ problemMAX 為 需要抓取的考題數量
 }
 ```
 
-## SDK Usage
+# SDK Usage
 Put your pdf to resources(Home) folder
 and then system will copy your PDf to SDK input folder
 
@@ -59,7 +56,7 @@ Final to get cut problem in CutOutput/
 ```bash
 python.exe Main.py
 ```
-## Output
+## CutOutput
 輸出位於 Home 目錄的 Cutoutput 
 * output.txt (全文)
 * 尚未切割的 jpg
@@ -68,6 +65,6 @@ python.exe Main.py
 For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
-### Tool from
+### 來源
 https://www.adobe.io/apis/documentcloud/dcsdk/pdf-extract.html
 https://www.adobe.io/apis/documentcloud/dcsdk/docs.html
