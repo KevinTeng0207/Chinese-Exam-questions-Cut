@@ -2,22 +2,16 @@ import json
 import os
 import re
 from PIL import Image
-
 from PDFtoJPG import convert
 import shutil
+from Config import config
 
-# config read
-with open('config.json', encoding="utf-8") as jsonfile:
-    temp = json.load(jsonfile)
-    pdfdir = temp['pdfdir']
-    pdfname = temp['pdfname']
-    problemMAX = temp['problemMAX']
-
-with open('resources\\' + pdfname + '.json', encoding="utf-8") as jsonfile:
+pdfdir, pdfname, problemMax = config()
+with open('../json/' + pdfname + '/structuredData.json', encoding="utf-8") as jsonfile:
     data = json.load(jsonfile)
     
 # pdf to jpg
-convert('resources\\' + pdfdir, "output\\" + pdfname) 
+convert('../resources/' + pdfdir, "../CutOutput/" + pdfname) 
 
 def mkdir(path):
     folder = os.path.exists(path)
@@ -29,15 +23,14 @@ def mkdir(path):
         os.makedirs(path)
 
 def CUT(page, problem, coopery1, coopery2):
-    img = Image.open("output\\" + pdfname + '\\pdf\\' + str(page) + '.jpg')
+    img = Image.open("../CutOutput/" + pdfname + '/pdf/' + str(page) + '.jpg')
     # print(img.size)
     d = img.size[1] / 842
     y1 = 842 - coopery1
     y2 = 842 - coopery2
-    print(y1, y2) # convert 後的座標(y軸)
-    # crop((left, upper, right, lower))
-    cropped = img.crop((0, y2 * d, img.size[0], y1 * d)) 
-    cutimg = "output\\" + pdfname + '\\cut\\' + str(problem - 1) + '.jpg'
+    # print(y1, y2) # convert 後的座標(y軸)
+    cropped = img.crop((0, y2 * d, img.size[0], y1 * d)) # crop((left, upper, right, lower))
+    cutimg = "../CutOutput/" + pdfname + '/cut/' + str(problem - 1) + '.jpg'
     cropped.save(cutimg)
 
 
@@ -46,12 +39,12 @@ y1 = 0
 y2 = 0
 Problem = 0
 mixdata = []
-mkdir("output\\" + pdfname + '\\cut')
+mkdir("../CutOutput/" + pdfname + '/cut')
 for d in data['elements']:
     try: 
         if re.match(r"^\d{1,}[.][^0-9]", d['Text'] + "測試") is not None:
             Problem = Problem + 1   
-            if Problem > problemMAX:
+            if Problem > problemMax:
                 break
             y2 = d['Bounds'][3]
             # print(d['Bounds'])
@@ -74,12 +67,11 @@ for d in data['elements']:
         continue
     
 # output into txt
-f = open("output\\" + pdfname + '\\output.txt', 'w', encoding="utf-8")
+f = open("../CutOutput/" + pdfname + '/output.txt', 'w', encoding="utf-8")
 f.writelines(output)
 f.close()
 
 for page, id, y1, y2 in mixdata:
-    print(page, id, y1, y2)
+    print('第%s頁 第%s題 y1 = %f y2 = %f' % (page + 1, id, y1, y2))
     CUT(page, id, y1, y2)
-
 

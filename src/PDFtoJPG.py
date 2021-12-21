@@ -8,17 +8,17 @@ def mkdir(path):
         # print('-----建立成功-----')
 
 def convert(pdf_dir, img_dir):
-    poppler_path = r'.\\Poppler\\poppler-0.68.0_x86\\poppler-0.68.0\\bin'
+    poppler_path = r'../Poppler/poppler-0.68.0_x86/poppler-0.68.0/bin'
     try:
         pages = convert_from_path(pdf_dir, 200, poppler_path)
     except:
-        print('----pdf is not exist----')
+        print('----pdf is not exist or path is wrong----')
         return
     mkdir(img_dir)
     i = 0
     for page in pages:
-        mkdir(img_dir + "\\pdf\\")
-        page.save(img_dir + "\\pdf\\" + str(i) + ".jpg", 'JPEG')
+        mkdir(img_dir + "/pdf/")
+        page.save(img_dir + "/pdf/" + str(i) + ".jpg", 'JPEG')
         i += 1
 
 

@@ -1,11 +1,13 @@
-Adobe PDF services SDK/private.key
-Adobe PDF services SDK/pdfservices-api-credentials.json
+AdobePDFservices\SDK/private.key
+AdobePDFservicesSDK/pdfservices-api-credentials.json
 node_modules/*
 node_modules
-Adobe PDF services SDK/output/*
-output/*/
+AdobePDFservices\SDK/output/*
+CutOutput/*/
+json/*/
 resources/*.pdf
 resources/*.json
 CODE_OF_CONDUCT.md
+test.py
 LICENSE.md
 __pycache__/*
