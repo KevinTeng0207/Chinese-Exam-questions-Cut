@@ -21,7 +21,7 @@ pip install -r requirements.txt
 # Config
 pdfdir 跟 pdfname 自行設定\
 pdfname 跟 pdf 檔名一樣\
-problemMAX 為 需要抓取的考題數量
+problemMAX 為 需要抓取的考題最大數量
 ```json
 {
     "pdfdir": "test.pdf",
