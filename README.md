@@ -4,13 +4,33 @@
 * Python : > 3.0 
 * put PDf to resources/
 # Installation
-## Node.js Installation
+## Node.js Installation and Setting
 
 ```bash
 cd AdobePDFservicesSDK/
 npm install
 ```
+AdobePDFservicesSDK/pdfservices-api-credentials.json
+```json
+{
+    "client_credentials": {
+        "client_id": "your key",
+        "client_secret": "your key"
+    },
+    "service_account_credentials": {
+        "organization_id": "your key",
+        "account_id": "your key",
+        "private_key_file": "private.key"
+    }
+}
+```
+AdobePDFservicesSDK/private.key
+```key
+-----BEGIN RSA PRIVATE KEY-----
+[key]
+-----END RSA PRIVATE KEY-----
 
+```
 ## Python Installation
 ```bash
 cd ..
