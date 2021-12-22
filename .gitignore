@@ -1,4 +1,4 @@
-AdobePDFservices/SDK/private.key
+AdobePDFservicesSDK/private.key
 AdobePDFservicesSDK/pdfservices-api-credentials.json
 node_modules/*
 node_modules
