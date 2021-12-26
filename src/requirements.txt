@@ -1,2 +1,3 @@
 json
 pdf2image
+PyPDF2
