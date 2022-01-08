@@ -1,7 +1,7 @@
 private.key
 pdfservices-api-credentials.json
-Poppler/*
-Poppler
+poppler-0.68.0/*
+poppler-0.68.0
 node_modules/*
 node_modules
 AdobePDFservices\SDK/output/*

@@ -8,7 +8,7 @@ def mkdir(path):
         # print('-----建立成功-----')
 
 def convert(pdf_dir, img_dir):
-    poppler_path = r'../Poppler/poppler-0.68.0_x86/poppler-0.68.0/bin'
+    poppler_path = r'../poppler-0.68.0_x86/bin'
     try:
         pages = convert_from_path(pdf_dir, 200, poppler_path)
     except:
