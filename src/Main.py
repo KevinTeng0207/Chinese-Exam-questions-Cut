@@ -5,7 +5,7 @@ from PIL import Image
 from PDFtoJPG import convert
 import shutil
 from Config import config
-from PyPDF2 import PdfFileWriter,PdfFileReader,PdfFileMerger
+from PyPDF2 import PdfFileWriter, PdfFileReader, PdfFileMerger
 
 pdfdir, pdfname, problemMax = config()
 with open('../json/' + pdfname + '/structuredData.json', encoding="utf-8") as jsonfile:

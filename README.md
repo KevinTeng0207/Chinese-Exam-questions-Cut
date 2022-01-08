@@ -5,12 +5,10 @@
 * put PDf to resources/
 # Installation
 ## Node.js Installation and Setting
-
 ```bash
-cd AdobePDFservicesSDK/
-npm install
+npm i
 ```
-AdobePDFservicesSDK/pdfservices-api-credentials.json
+Create pdfservices-api-credentials.json
 ```json
 {
     "client_credentials": {
@@ -24,7 +22,7 @@ AdobePDFservicesSDK/pdfservices-api-credentials.json
     }
 }
 ```
-AdobePDFservicesSDK/private.key
+Create private.key
 ```key
 -----BEGIN RSA PRIVATE KEY-----
 [key]
@@ -33,11 +31,12 @@ AdobePDFservicesSDK/private.key
 ```
 ## Python Installation
 ```bash
-cd ..
 cd src/
 pip install -r requirements.txt
 ```
-
+## Poppler Installation
+1. install [Poppler](https://drive.google.com/drive/folders/1EzrEnqruuMJfL0I0hqCrPEnkXESl7MJk?usp=sharing)
+2. Put folder on home dir
 # Config
 pdfdir 跟 pdfname 自行設定\
 pdfname 跟 pdf 檔名一樣\
@@ -51,19 +50,10 @@ problemMAX 為 需要抓取的考題最大數量
 ```
 
 # SDK Usage
-Put your pdf to resources(Home) folder
-and then system will copy your PDf to SDK input folder
-
-```bash
-cd src/
-python.exe Copy.py
-```
-
 Run SDK api to get output
 
 ```bash
-cd AdobePDFservicesSDK/
-node ./src/extractpdf/extract-text-info-from-pdf.js
+node extract-text-info-from-pdf.js
 ```
 
 Get structuredData.json to extract pdf infomation
@@ -88,3 +78,4 @@ Please make sure to update tests as appropriate.
 ### 來源
 https://www.adobe.io/apis/documentcloud/dcsdk/pdf-extract.html
 https://www.adobe.io/apis/documentcloud/dcsdk/docs.html
+

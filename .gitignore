@@ -1,5 +1,7 @@
-AdobePDFservicesSDK/private.key
-AdobePDFservicesSDK/pdfservices-api-credentials.json
+private.key
+pdfservices-api-credentials.json
+Poppler/*
+Poppler
 node_modules/*
 node_modules
 AdobePDFservices\SDK/output/*
@@ -11,3 +13,4 @@ CODE_OF_CONDUCT.md
 test.py
 LICENSE.md
 __pycache__/*
+src/__pycache__
