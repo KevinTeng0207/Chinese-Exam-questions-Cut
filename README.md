@@ -2,7 +2,7 @@
 ## Prerequisites
 * Node.js : Version 10.13
 * Python : > 3.0 
-* put PDf to resources/
+* Poppler == 0.68
 # Installation
 ## Node.js Installation and Setting
 ```bash
@@ -49,7 +49,8 @@ problemMAX 為 需要抓取的考題最大數量
 }
 ```
 
-# SDK Usage
+# Usage
+<span style="color:red">Put PDF to resources/</span><br>
 Run SDK api to get output
 
 ```bash
